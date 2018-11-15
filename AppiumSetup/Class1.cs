@@ -5,6 +5,7 @@ using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace AppiumSetup
     class Class1
     {
         IWebDriver driver;
-        
+        protected EnquiryPage enquiryPage;
         //AppiumDriver<IWebElement> appDri;
 
         DesiredCapabilities cap = new DesiredCapabilities();
@@ -78,10 +79,30 @@ namespace AppiumSetup
             cap.SetCapability("platformName", "Android");
 
             driver = new RemoteWebDriver(new Uri("http://localhost:4723/wd/hub"), cap, TimeSpan.FromMinutes(2));
+            enquiryPage = new EnquiryPage(driver);
 
-            driver.Navigate().GoToUrl("https://www.vanquis.co.uk");
+            // driver.Navigate().GoToUrl("https://vanquis..co.uk/enquiry");
+            driver.Navigate().GoToUrl("https://www.vanquis.co.uk/enquiry");
+
+            enquiryPage.TitleMiss.SendKeys(Keys.Space);
             driver.Quit();
         }
 
+
+        [Test]
+        public void Web()
+        {
+
+
+            driver = new ChromeDriver();
+            enquiryPage = new EnquiryPage(driver);
+
+
+            // driver.Navigate().GoToUrl("https://vanquis.uat.vanquis.co.uk/enquiry");
+            driver.Navigate().GoToUrl("https://www.vanquis.co.uk/enquiry");
+
+            enquiryPage.TitleMiss.SendKeys(Keys.Space);
+            driver.Quit();
+        }
     }
 }

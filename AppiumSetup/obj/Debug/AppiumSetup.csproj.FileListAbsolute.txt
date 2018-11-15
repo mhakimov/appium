@@ -48,3 +48,5 @@ C:\DevAppium\appium\AppiumSetup\obj\Debug\AppiumSetup.csproj.CoreCompileInputs.c
 C:\DevAppium\appium\AppiumSetup\obj\Debug\AppiumSetup.csproj.CopyComplete
 C:\DevAppium\appium\AppiumSetup\obj\Debug\AppiumSetup.dll
 C:\DevAppium\appium\AppiumSetup\obj\Debug\AppiumSetup.pdb
+C:\DevAppium\appium\AppiumSetup\bin\Debug\SeleniumExtras.PageObjects.dll
+C:\DevAppium\appium\AppiumSetup\bin\Debug\SeleniumExtras.WaitHelpers.dll
