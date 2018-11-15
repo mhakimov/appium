@@ -98,7 +98,7 @@ namespace AppiumSetup
             enquiryPage = new EnquiryPage(driver);
 
 
-            // driver.Navigate().GoToUrl("https://vanquis.uat.vanquis.co.uk/enquiry");
+            // driver.Navigate().GoToUrl("https://vanquis..co.uk/enquiry");
             driver.Navigate().GoToUrl("https://www.vanquis.co.uk/enquiry");
 
             enquiryPage.TitleMiss.SendKeys(Keys.Space);
